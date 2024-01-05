@@ -1,7 +1,7 @@
 return {
   {
     "williamboman/mason.nvim",
-    lazy = false,
+    lazy = true,
     config = function()
       require("mason").setup()
     end,
@@ -11,6 +11,7 @@ return {
     lazy = false,
     opts = {
       auto_install = true,
+      ensure_installed = { "lua_ls", "jedi_language_server" },
     },
   },
   {
@@ -20,7 +21,7 @@ return {
       local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
       local lspconfig = require("lspconfig")
-      lspconfig.tsserver.setup({
+      lspconfig.jedi_language_server.setup({
         capabilities = capabilities
       })
       lspconfig.html.setup({
