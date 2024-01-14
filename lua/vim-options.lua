@@ -12,4 +12,4 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 vim.keymap.set('n', '<leader>h', ':nohlsearch<CR>')
 vim.wo.number = true
-
+vim.cmd("let g:python3_host_prog = '/home/noyk/.nvim-venv/bin/python3'")
